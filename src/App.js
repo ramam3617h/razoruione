@@ -4,6 +4,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import Login from './components/Login';
 import Register from './components/Register';
 import Dashboard from './components/Dashboard';
+import PolicyPages from './components/PolicyPages';
 
 const AppContent = () => {
   const [view, setView] = useState('login');
@@ -32,9 +33,10 @@ const AppContent = () => {
       {view === 'login' && ( <Login
           onSwitchToRegister={() => setView('register')}
           onLoginSuccess={() => setView('dashboard')}
+          onSwitchToPolicyPages={() => setView('policypages') }
         />
       )}
-
+ 
       {view === 'register' && (
         <Register
           onSwitchToLogin={() => setView('login')}
@@ -43,9 +45,12 @@ const AppContent = () => {
             alert('Registration successful! Please check your email to verify your account before logging i');
           }}
         />
-      )}
+       )}
+      
+     { view === 'policypages' && (<PolicyPages /> )}
 
       {view === 'dashboard' && user && <Dashboard />}
+      
    </>
   );
 };
@@ -59,3 +64,4 @@ const App = () => {
 };
 
 export default App;
+
