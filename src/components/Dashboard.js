@@ -188,7 +188,6 @@ const Dashboard = () => {
         {/* Plans Grid */}
         <div className="grid md:grid-cols-3 gap-8">
           { plans.map((plan) => {
-         {/*    const features = JSON.parse(plan.features);  */}
             const isPopular = plan.is_popular;
             return (
               <div

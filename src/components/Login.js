@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
-import PolicyPages from  '../components/PolicyPages';
 const Login = ({onSwitchToPolicyPages,onSwitchToRegister, onLoginSuccess }) => {
   const { login } = useAuth();
   const [email, setEmail] = useState('');
