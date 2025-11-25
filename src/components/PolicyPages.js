@@ -171,7 +171,7 @@ const PolicyPages = () => {
 
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-gray-900">10. Governing Law</h2>
-        <p className="text-gray-700">These terms are governed by the laws of the State of California, United States, without regard to conflict of law provisions.</p>
+        <p className="text-gray-700">These terms are governed by the Indian Laws, without regard to conflict of law provisions.</p>
       </section>
     </div>
   );
