@@ -1,10 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
+//import  { Route } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Login from './components/Login';
 import Register from './components/Register';
 import Dashboard from './components/Dashboard';
 import PolicyPages from './components/PolicyPages';
+import ForgetPassword from './components/ForgetPassword';
+import ResetPassword from './components/ResetPassword';
+
 
 const AppContent = () => {
   const [view, setView] = useState('login');
@@ -34,6 +38,8 @@ const AppContent = () => {
           onSwitchToRegister={() => setView('register')}
           onLoginSuccess={() => setView('dashboard')}
           onSwitchToPolicyPages={() => setView('policypages') }
+          onSwitchToForgetPassword = {() => setView('forgetpassword') }
+          onSwitchToResetPassword = { ()=> setView('resetpassword') }
         />
       )}
  
@@ -46,10 +52,21 @@ const AppContent = () => {
           }}
         />
        )}
-      
-     { view === 'policypages' && (<PolicyPages /> )}
 
-      {view === 'dashboard' && user && <Dashboard />}
+     {view === 'forgetpassword' && (
+        <ForgetPassword
+          onBackToLogin={() => setView('login')}
+        />
+       )}
+
+      {view === 'resetpassword' && (
+        <ResetPassword
+          onBackToLogin={() => setView('login')}
+        />
+       )} 
+
+    { view === 'policypages' && (<PolicyPages /> )}
+     { view === 'dashboard' && user && <Dashboard />}
       
    </>
   );

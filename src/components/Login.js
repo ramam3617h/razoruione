@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
-const Login = ({onSwitchToPolicyPages,onSwitchToRegister, onLoginSuccess }) => {
+const Login = ({onSwitchToResetPassword,onSwitchToPolicyPages,onSwitchToRegister,onSwitchToForgetPassword, onLoginSuccess }) => {
   const { login } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -79,14 +79,38 @@ const Login = ({onSwitchToPolicyPages,onSwitchToRegister, onLoginSuccess }) => {
             </button>
           </p>
         </div>
+
         <div className="mt-6 text-center">
           <p className="text-gray-600">
-            Terms and condition and policy{' '}
+            Forget Password?{' '}
+            <button
+               onClick={onSwitchToForgetPassword}
+              className="text-yellow-600 font-semibold hover:underline"
+            >
+               ForgetPassword
+            </button>
+          </p>
+        </div>
+	<div className="mt-6 text-center">
+          <p className="text-gray-600">
+            Password Reset?{' '}
+            <button
+               onClick={onSwitchToResetPassword}
+              className="text-yellow-600 font-semibold hover:underline"
+            >
+                Password Reset
+            </button>
+          </p>
+        </div>
+
+        <div className="mt-6 text-center">
+          <p className="text-gray-600">
+            Terms and condition and Policy{' '}
             <button
               onClick={onSwitchToPolicyPages}
               className="text-yellow-600 font-semibold hover:underline"
             >
-	    PolicyPages
+	      PolicyPage
             </button>
           </p>
         </div>

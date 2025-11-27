@@ -33,8 +33,17 @@ export const AuthProvider = ({ children }) => {
     await authAPI.register(data);
   };
    const verifyemail = async (vtoken) => {
-    await authAPI.verifyemail(vtoken);
+    await authAPI.verifyEmail(vtoken);
   };
+ 
+  const forgetpassword = async (email) => {
+    await authAPI.forgetPassword(email);
+   };
+    const resetpassword = async (rtoken) => {
+    await authAPI.resetPassword(rtoken);
+  };
+
+
 
   const logout = () => {
     localStorage.removeItem('token');
@@ -43,7 +52,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, register, logout, loading,verifyemail }}>
+    <AuthContext.Provider value={{ user, login, register, logout, loading,verifyemail,forgetpassword,resetpassword }}>
       {children}
     </AuthContext.Provider>
   );

@@ -34,7 +34,7 @@ const Register = ({ onSwitchToLogin, onRegisterSuccess }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-pink-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full">
         <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Create Account</h2>
         
@@ -53,7 +53,7 @@ const Register = ({ onSwitchToLogin, onRegisterSuccess }) => {
                 name="first_name"
                 value={formData.first_name}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 required
               />
             </div>
@@ -64,7 +64,7 @@ const Register = ({ onSwitchToLogin, onRegisterSuccess }) => {
                 name="last_name"
                 value={formData.last_name}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 required
               />
             </div>
@@ -77,7 +77,7 @@ const Register = ({ onSwitchToLogin, onRegisterSuccess }) => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
               required
             />
           </div>
@@ -89,7 +89,7 @@ const Register = ({ onSwitchToLogin, onRegisterSuccess }) => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
               placeholder="9876543210"
             />
           </div>
@@ -101,7 +101,7 @@ const Register = ({ onSwitchToLogin, onRegisterSuccess }) => {
               name="password"
               value={formData.password}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
               minLength="8"
               required
             />
@@ -111,7 +111,7 @@ const Register = ({ onSwitchToLogin, onRegisterSuccess }) => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-purple-600 text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition-colors disabled:opacity-50"
+            className="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50"
           >
             {loading ? 'Creating Account...' : 'Register'}
           </button>
@@ -122,7 +122,7 @@ const Register = ({ onSwitchToLogin, onRegisterSuccess }) => {
             Already have an account?{' '}
             <button
               onClick={onSwitchToLogin}
-              className="text-purple-600 font-semibold hover:underline"
+              className="text-green-600 font-semibold hover:underline"
             >
               Login
             </button>
