@@ -8,7 +8,7 @@ import Dashboard from './components/Dashboard';
 import PolicyPages from './components/PolicyPages';
 import ForgetPassword from './components/ForgetPassword';
 import ResetPassword from './components/ResetPassword';
-
+import VerifyEmail from './components/VerifyEmail';
 
 const AppContent = () => {
   const [view, setView] = useState('login');
@@ -35,11 +35,12 @@ const AppContent = () => {
   return(
     <>
       {view === 'login' && ( <Login
-          onSwitchToRegister={() => setView('register')}
-          onLoginSuccess={() => setView('dashboard')}
-          onSwitchToPolicyPages={() => setView('policypages') }
-          onSwitchToForgetPassword = {() => setView('forgetpassword') }
+          onSwitchToRegister={ () => setView('register') }
+          onLoginSuccess={ () => setView('dashboard') }
+          onSwitchToPolicyPages={ () => setView('policypages') }
+          onSwitchToForgetPassword = { () => setView('forgetpassword') }
           onSwitchToResetPassword = { ()=> setView('resetpassword') }
+          onSwitchToVerifyEmail = { () => setView('verifyemail') }
         />
       )}
  
@@ -64,6 +65,11 @@ const AppContent = () => {
           onBackToLogin={() => setView('login')}
         />
        )} 
+      {view === 'verifyemail' && (
+        <VerifyEmail
+          onBackToLogin={() => setView('login')}
+        />
+       )}
 
     { view === 'policypages' && (<PolicyPages /> )}
      { view === 'dashboard' && user && <Dashboard />}
