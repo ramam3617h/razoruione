@@ -26,7 +26,7 @@ const Login = ({onSwitchToResetPassword,onSwitchToPolicyPages,onSwitchToRegister
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-indigo-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center"> Vrksa Tech Welcomes you</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center"> Onboarding engineering staff for a work-from-anywhere model</h2>
 
         {error && (
           <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-4">
@@ -68,7 +68,7 @@ const Login = ({onSwitchToResetPassword,onSwitchToPolicyPages,onSwitchToRegister
           </button>
         </form>
 
-        <div className="mt-6 text-center">
+        <div className="mt-3 text-center">
           <p className="text-gray-600">
             Don't have an account?{' '}
             <button
@@ -80,7 +80,7 @@ const Login = ({onSwitchToResetPassword,onSwitchToPolicyPages,onSwitchToRegister
           </p>
         </div>
 
-        <div className="mt-6 text-center">
+        <div className="mt-3 text-center">
           <p className="text-gray-600">
             Forget Password?{' '}
             <button
@@ -91,7 +91,7 @@ const Login = ({onSwitchToResetPassword,onSwitchToPolicyPages,onSwitchToRegister
             </button>
           </p>
         </div>
-	<div className="mt-6 text-center">
+	<div className="mt-3 text-center">
           <p className="text-gray-600">
             Password Reset?{' '}
             <button
@@ -103,7 +103,7 @@ const Login = ({onSwitchToResetPassword,onSwitchToPolicyPages,onSwitchToRegister
           </p>
         </div>
 
-        <div className="mt-6 text-center">
+        <div className="mt-3 text-center">
           <p className="text-gray-600">
             Terms and condition and Policy{' '}
             <button
