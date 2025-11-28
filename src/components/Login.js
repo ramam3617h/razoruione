@@ -99,7 +99,7 @@ const Login = ({onSwitchToVerifyEmail,
                onClick={onSwitchToResetPassword}
               className="text-green-600 font-semibold hover:underline"
             >
-                Password Reset
+                PasswordReset
             </button>
 	     {' '}
             <button
