@@ -6,6 +6,7 @@ import React, { useState, useEffect } from 'react';
 import { authAPI } from '../services/api';
 
   const ResetPassword = ({ onResetSuccess, onBackToLogin }) => {
+//   const ResetPassword = ( {onBackToLogin } )  => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [token, setToken] = useState('');

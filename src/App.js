@@ -56,18 +56,26 @@ const AppContent = () => {
 
      {view === 'forgetpassword' && (
         <ForgetPassword
-          onBackToLogin={() => setView('login')}
+          onBackToLogin={() => setView('login') }
         />
        )}
 
       {view === 'resetpassword' && (
         <ResetPassword
           onBackToLogin={() => setView('login')}
-        />
-       )} 
+         onResetSuccess = { () => {
+            setView('login');
+           alert('Reset Password successful! You can login now');
+            }}
+	 />
+       )}
       {view === 'verifyemail' && (
         <VerifyEmail
           onBackToLogin={() => setView('login')}
+          onVerificationSuccess = { () => {
+          setView('login');
+            alert( "your email verified .now you can login");
+             }}
         />
        )}
 

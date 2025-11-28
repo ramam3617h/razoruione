@@ -5,7 +5,8 @@
 import React, { useState, useEffect } from 'react';
 import { authAPI } from '../services/api';
 
-const VerifyEmail = ({onVerificationSuccess, onBackToLogin }) => {
+ const VerifyEmail = ({onVerificationSuccess, onBackToLogin }) => {
+ // const VerifyEmail = ( { onBackToLogin } )  =>  {
   const [status, setStatus] = useState('verifying');
   const [message, setMessage] = useState('');
 
