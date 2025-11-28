@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, FileText, Shield, Package, XCircle, Lock } from 'lucide-react';
 
-const PolicyPages = () => {
+const PolicyPages = ({onBackToLogin}) => {
   const [activePage, setActivePage] = useState('contact');
 
   const pages = [
@@ -395,6 +395,12 @@ const PolicyPages = () => {
             <div className="flex items-center space-x-2">
               <Shield className="w-8 h-8 text-yellow-600" />
               <span className="text-xl font-bold text-gray-900">VRKSA TECHNOLOGY</span>
+                <button
+                onClick={onBackToLogin}
+                className="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition-colors"
+              >
+                Back to Login
+              </button>
             </div>
             <div className="hidden md:flex space-x-1">
               {pages.map(page => {
@@ -440,7 +446,7 @@ const PolicyPages = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-white font-semibold mb-3">Vrksa Technology</h3>
-              <p className="text-sm">Professional IT services and solutions for modern businesses.</p>
+              <p className="text-sm">Professional IT services and solutions for modern cloud businesses.</p>
             </div>
             <div>
               <h3 className="text-white font-semibold mb-3">Quick Links</h3>

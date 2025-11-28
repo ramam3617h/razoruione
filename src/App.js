@@ -79,7 +79,9 @@ const AppContent = () => {
         />
        )}
 
-    { view === 'policypages' && (<PolicyPages /> )}
+    { view === 'policypages' && (<PolicyPages 
+                onBackToLogin ={ () => setView('login')}
+                /> )}
      { view === 'dashboard' && user && <Dashboard />}
       
    </>
